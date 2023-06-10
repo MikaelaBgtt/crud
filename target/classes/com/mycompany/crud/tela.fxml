@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.crud.TelaController">
+  <tabs>
+    <Tab text="Pessoa">
+         <content>
+            <Pane prefHeight="349.0" prefWidth="600.0">
+               <children>
+                  <TextField id="textoNome" fx:id="textoNome" layoutX="65.0" layoutY="76.0" />
+                  <TextField id="textoCPF" fx:id="textoCPF" layoutX="67.0" layoutY="130.0" />
+                  <Label layoutX="123.0" layoutY="51.0" text="Nome" />
+                  <Label layoutX="133.0" layoutY="108.0" text="CPF" />
+                  <Label layoutX="95.0" layoutY="164.0" text="Data de Nascimento" />
+                  <Button id="btnSalvarPessoa" fx:id="btnSalvarPessoa" onAction="#salvarPessoa" layoutX="63.0" layoutY="233.0" mnemonicParsing="false" text="Salvar" />
+                  <DatePicker id="textoDataNasc" fx:id="textoDataNasc" layoutX="59.0" layoutY="185.0" />
+                  <Button layoutX="122.0" layoutY="233.0" id="btnAtualizarPessoa" fx:id="btnAtualizarPessoa" onAction="#btnAtualizar" mnemonicParsing="false" text="Editar" />
+                  <Button id="btnApagarPessoa" fx:id="btnApagarPessoa" onAction="#btnApagar" layoutX="178.0" layoutY="233.0" mnemonicParsing="false" text="Excluir" />
+                  <Button layoutX="119.0" layoutY="271.0" mnemonicParsing="false" text="Limpar" fx:id="btnLimparPessoa" onAction="#btnLimparPessoa" id="btnLimparPessoa" />
+                  <TableView id="tabelaPessoa" fx:id="tabelaPessoa" layoutX="263.0" layoutY="31.0" prefHeight="246.0" prefWidth="295.0">
+                    <columns>
+                      <TableColumn prefWidth="90.0" text="Nome" id="tabelaNome" fx:id="tabelaNome" />
+                      <TableColumn prefWidth="75.0" text="CPF" id="tabelaCPF" fx:id="tabelaCPF" />
+                      <TableColumn prefWidth="100.0" text="Data de Nascimento" id="tabelaData" fx:id="tabelaData" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content></Tab>
+    <Tab text="Lugar">
+         <content>
+            <Pane prefHeight="349.0" prefWidth="600.0">
+               <children>
+                  <TextField layoutX="65.0" layoutY="76.0" fx:id="textoPais" id="textoPais"/>
+                  <TextField layoutX="67.0" layoutY="130.0" fx:id="textoCidade" id="textoCidade"/>
+                  <Label layoutX="129.0" layoutY="51.0" text="País" />
+                  <Label layoutX="123.0" layoutY="108.0" text="Cidade" />
+                  <Label layoutX="123.0" layoutY="164.0" text="Estado" />
+                  <Button layoutX="63.0" layoutY="233.0" mnemonicParsing="false" text="Salvar" fx:id="btnSalvarLugar" id="btnSalvarLugar" onAction="#salvarLugar"/>
+                  <Button layoutX="122.0" layoutY="233.0" mnemonicParsing="false" text="Editar" fx:id="btnAtualizarLugar" id="btnAtualizarLugar" onAction="#btnAtualizar3"/>
+                  <Button layoutX="178.0" layoutY="233.0" mnemonicParsing="false" text="Excluir" fx:id="btnApagarLugar" id="btnApagarLugar" onAction="#btnApagar3"/>
+                  <Button layoutX="119.0" layoutY="271.0" mnemonicParsing="false" text="Limpar" fx:id="btnLimparLugar" onAction="#btnLimparLugar" id="btnLimparLugar"/>
+                  <TextField layoutX="66.0" layoutY="189.0" fx:id="textoEstado" id="textoEstado"/>
+                  <TableView layoutX="270.0" layoutY="29.0" prefHeight="247.0" prefWidth="296.0" fx:id="tabelaLugar" id="tabelaLugar">
+                    <columns>
+                      <TableColumn prefWidth="100.0" text="País" fx:id="tabelaPais" id="tabelaPais"/>
+                      <TableColumn prefWidth="100.0" text="Cidade" fx:id="tabelaCidade" id="tabelaCidade"/>
+                      <TableColumn prefWidth="100.0" text="Estado" fx:id="tabelaEstado" id="tabelaEstado"/>
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content></Tab>
+      <Tab text="Veículo">
+         <content>
+            <Pane prefHeight="349.0" prefWidth="600.0">
+               <children>
+                  <TextField layoutX="65.0" layoutY="76.0" fx:id="textoNomeV" id="textoNomeV"/>
+                  <TextField layoutX="67.0" layoutY="130.0" fx:id="textoCor" id="textoCor"/>
+                  <Label layoutX="127.0" layoutY="51.0" text="Nome"/>
+                  <Label layoutX="133.0" layoutY="108.0" text="Cor"/>
+                  <Label layoutX="130.0" layoutY="164.0" text="Ano"/>
+                  <Button layoutX="63.0" layoutY="233.0" mnemonicParsing="false" text="Salvar" fx:id="btnSalvarVeiculo" id="btnSalvarVeiculo" onAction="#salvarVeiculo"/>
+                  <Button layoutX="122.0" layoutY="233.0" mnemonicParsing="false" text="Editar" fx:id="btnAtualizarVeiculo" id="btnAtualizarVeiculo" onAction="#btnAtualizar2"/>
+                  <Button layoutX="178.0" layoutY="233.0" mnemonicParsing="false" text="Excluir" fx:id="btnExcluirVeiculo" id="btnExcluirVeiculo" onAction="#btnApagar2" />
+                  <Button layoutX="119.0" layoutY="271.0" mnemonicParsing="false" text="Limpar" fx:id="btnLimparVeiculo" onAction="#btnLimparVeiculo" id="btnLimparVeiculo"/>
+                  <TextField layoutX="66.0" layoutY="189.0" fx:id="textoAno" id="textoAno"/>
+                  <TableView layoutX="270.0" layoutY="26.0" prefHeight="249.0" prefWidth="292.0" fx:id="tabelaVeiculo" id="tabelaVeiculo">
+                    <columns>
+                      <TableColumn prefWidth="100.0" text="Nome" id="tabelaNomeV" fx:id="tabelaNomeV"/>
+                      <TableColumn prefWidth="100.0" text="Cor" id="tabelaCor" fx:id="tabelaCor"/>
+                      <TableColumn prefWidth="100.0" text="Ano" id="tabelaAno" fx:id="tabelaAno"/>
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+      <Tab text="Viagem">
+         <content>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="36.0" layoutY="222.0" mnemonicParsing="false" text="Salvar" id="btnSalvarViagem" fx:id="btnSalvarViagem" onAction="#salvarViagem"/>
+                  <ComboBox id="pessoaSel" fx:id="pessoaSel" onMouseClicked = "#fornecePessoa" layoutX="50.0" layoutY="50.0" prefWidth="150.0" promptText="Pessoa" />
+                  <ComboBox id="lugarSel" fx:id="lugarSel" onMouseClicked="#forneceLugar" layoutX="50.0" layoutY="108.0" prefWidth="150.0" promptText="Lugar" />
+                  <ComboBox layoutX="50.0" layoutY="166.0" prefWidth="150.0" id="veiculoSel" fx:id="veiculoSel" onMouseClicked="#forneceVeiculo" promptText="Veículo" />
+                  <Button layoutX="102.0" layoutY="222.0" mnemonicParsing="false" text="Editar" id="btnAtualizarViagem" fx:id="btnAtualizarViagem" onAction="#btnAtualizar4"/>
+                  <Button layoutX="165.0" layoutY="222.0" mnemonicParsing="false" text="Excluir" id="btnApagarViagem" fx:id="btnApagarViagem" onAction="#btnApagar4"/>
+                  <Button layoutX="99.0" layoutY="264.0" mnemonicParsing="false" text="Limpar" fx:id="btnLimparViagem" onAction="#btnLimparViagem" id="btnLimparViagem"/>
+                  <TableView layoutX="266.0" layoutY="25.0" prefHeight="250.0" prefWidth="294.0" id="tabelaViagem" fx:id="tabelaViagem">
+                    <columns>
+                      <TableColumn prefWidth="100.0" text="Pessoa" id="tabelaPessoaV" fx:id="tabelaPessoaV"/>
+                      <TableColumn prefWidth="100.0" text="Lugar" id="tabelaLugarV" fx:id="tabelaLugarV"/>
+                      <TableColumn prefWidth="100.0" text="Veículo" id="tabelaVeiculoV" fx:id="tabelaVeiculoV"/>
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
